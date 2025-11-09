@@ -19,8 +19,8 @@ export default class SendEmailController {
 
       await mail.send((message) => {
         message
-          .from(`${process.env.SMTP_AUTH_USER}`)
-          .to(`${process.env.SMTP_AUTH_USER}`)
+          .from(process.env.SMTP_AUTH_USER!)
+          .to(process.env.SMTP_AUTH_USER!)
           .subject(subject)
           .html(messageBody)
       })
