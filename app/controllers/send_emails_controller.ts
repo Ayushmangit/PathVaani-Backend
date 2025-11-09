@@ -31,4 +31,8 @@ export default class SendEmailController {
       return response.status(500).json({ success: false, error: error.message })
     }
   }
+
+  public async show({response}:HttpContext){
+    return response.ok("pathVaani send route")
+  }
 }
