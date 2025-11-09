@@ -5,3 +5,4 @@ router.get('/',({response}:HttpContext)=>{
   response.ok({msg:'success'})
 })
 router.post('/send', [SendEmailController, 'send']);
+router.get('/send', [SendEmailController, 'show']);
