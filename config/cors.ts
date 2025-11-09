@@ -1,12 +1,19 @@
-const corsConfig = {
+import { defineConfig } from '@adonisjs/cors'
+
+export default defineConfig({
   enabled: true,
-  origin: true, // Allow all origins (for testing)
+
+
+  origin: ['*'],
+
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
-  headers: true,
-  exposeHeaders: true,
+
+  
+  headers: ['*'],
+
+  
+  exposeHeaders: ['*'],
+
   credentials: false,
   maxAge: 90,
-}
-
-export default corsConfig
-
+})
