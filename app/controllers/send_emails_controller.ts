@@ -6,6 +6,7 @@ export default class SendEmailController {
   public async send({ request, response }: HttpContext) {
     try {
       const data = request.body()
+      console.log(data)
       console.log('📩 JSON received from ESP32:', data)
 
       const subject = data.SOS ? "🚨 SOS Alert from Smart Stick" : "Smart Stick Data"
