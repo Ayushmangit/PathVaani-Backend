@@ -4,6 +4,7 @@ import 'dotenv/config'
 
 export default class SendEmailController {
   public async send({ request, response }: HttpContext) {
+    console.log("jaishree")
     try {
       const data = request.body()
       console.log(data)
